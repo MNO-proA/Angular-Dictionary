@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { DefinitionComponent } from './definition/definition.component';
 import { ThesaurusComponent } from './thesaurus/thesaurus.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,11 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     DefinitionComponent,
     ThesaurusComponent,
-    ContactComponent
+    ContactComponent,
+    PageNotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
